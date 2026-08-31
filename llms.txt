@@ -1,0 +1,41 @@
+# Shipment Document Control
+
+> Checks a shipment's document pack against the shipping instruction held on a SharePoint list,
+> gets the drafts approved by a named person, then chases the originals via Outlook. Presence by
+> set arithmetic, agreement by fixed rules, a language model only where the reading is.
+
+## What it is
+
+An n8n workflow for supply chain and logistics document desks. One OneDrive folder per shipment
+with drafts and originals inside. A daily scan, plus a trigger that re-runs within minutes of a
+file landing, names each file from its filename through an alias table, checks the required
+documents are present against per-contract requirement rows, reads the fields each row names out
+of the present drafts with a model, and compares them with the values a person typed on the
+Shipments list. The row's next_step column is the worklist. A named person approves on a form;
+the counterparty is asked for the originals and chased on a schedule until they arrive. Every
+change lands on an append-only log.
+
+## What it is not
+
+Not a document authoring tool, not a letter of credit presentation, not customs or freight
+software, not an OCR archive. Originals are checked for presence, not read. The model never
+decides presence, agreement or approval.
+
+## Key facts
+
+- Stack: n8n 1.90+, Microsoft OneDrive, Microsoft SharePoint Lists, Microsoft Outlook (optional),
+  any Messages-API model endpoint. No database.
+- 51 nodes, one importable JSON. Three SharePoint lists: Shipments (the instruction and the
+  worklist), Document requirements (one row per document type per contract), Document log.
+- Document types are rows, never branches. Adding a document to a contract is a row on a list.
+- EU AI Act Article 50: the one message that quotes model-read values carries a readable line, an
+  X-AI-Generated header and a machine-readable envelope; rule-written messages are unmarked.
+- Licence: MIT. Author: Aleks Sidorecs, Automatiqa Lab. Contact: aleks@automatiqa.io.
+
+## Files
+
+- README.md: what it does, what it looks like, install.
+- SCOPE.md: limits, by name.
+- COMPLIANCE.md: EU AI Act role classification and marking architecture.
+- workflows/ship-doc.json: the workflow.
+- lists/: seed CSVs and column types for the three lists.

@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: Shipment Document Control
+abstract: "Checks a shipment's document pack against the shipping instruction on a SharePoint list, gets the drafts approved by a named person, then chases the originals via Outlook. Presence by set arithmetic, agreement by fixed rules, a language model only where the reading is. Runs on self-hosted n8n."
+type: software
+authors:
+  - family-names: Sidorecs
+    given-names: Aleks
+repository-code: "https://github.com/automatiqa-lab/ship-doc"
+license: MIT
+keywords:
+  - shipping-documents
+  - bill-of-lading
+  - supply-chain
+  - logistics
+  - document-control
+  - n8n
+  - onedrive
+  - sharepoint

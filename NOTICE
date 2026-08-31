@@ -1,0 +1,33 @@
+Shipment document control
+Copyright 2026 Automatiqa Lab by Aleks Sidorecs <aleks@automatiqa.io>
+
+This product includes software developed as part of the Automatiqa Lab
+(https://www.automatiqa.io/).
+
+Licensed under the MIT License. See LICENSE.
+
+---
+
+Upstream models
+
+This workflow sends a draft shipping document to a model endpoint that you configure and hold the
+key for. The lab does not train, fine-tune or distribute models, and is not a provider of a
+general-purpose AI model under the EU AI Act; obligations for the model itself rest with whoever
+provides it, under their own terms.
+
+A model is used for exactly one bounded job: copying the fields a requirement row names out of a
+document, as written, with null where the document does not state a value. No model decides
+whether a document is present, complete or correct. Presence is set arithmetic over the requirement
+rows; agreement is a fixed comparison against the values a person typed on the Shipments row, and
+swapping the model cannot change either.
+
+Output produced through that endpoint is marked per Article 50. See COMPLIANCE.md.
+
+---
+
+Scope
+
+The workflow checks a shipment's document pack against the shipping instruction, records a named
+person's approval, and chases originals. It is not a letter of credit presentation tool, not a
+freight or customs system, and it does not know whether the requirement rows you put in it are the
+right ones for your contract.

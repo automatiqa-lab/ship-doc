@@ -1,0 +1,9 @@
+Title,doc_type,required,original_required,check_fields,tolerance_pct
+C-2026-014,bill_of_lading,Yes,Yes,"consignee,notify_party,vessel,port_of_loading,port_of_discharge,net_weight_kg,marks",0.5
+C-2026-014,phytosanitary,Yes,Yes,"consignee,origin_country,commodity,net_weight_kg",0.5
+C-2026-014,certificate_of_origin,Yes,Yes,"consignee,origin_country,commodity,net_weight_kg",0.5
+C-2026-014,commercial_invoice,Yes,No,"consignee,contract_ref,net_weight_kg",0
+C-2026-014,packing_list,Yes,No,"bags,net_weight_kg,marks",0
+C-2026-014,weight_certificate,Yes,No,"net_weight_kg",0.5
+C-2026-014,quality_certificate,No,No,"commodity,net_weight_kg",1
+C-2026-014,ico_certificate,No,No,"origin_country,net_weight_kg",0.5
