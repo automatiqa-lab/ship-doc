@@ -121,3 +121,5 @@ reasoning: [COMPLIANCE.md](COMPLIANCE.md).
 ## Licence
 
 MIT. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
+
+Part of [Automatiqa Lab](https://www.automatiqa.io) by Aleks Sidorecs. Project page: [automatiqa.io/ship-doc](https://www.automatiqa.io/ship-doc/).
