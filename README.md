@@ -123,3 +123,5 @@ reasoning: [COMPLIANCE.md](COMPLIANCE.md).
 MIT. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
 
 Part of [Automatiqa Lab](https://www.automatiqa.io) by Aleks Sidorecs. Project page: [automatiqa.io/ship-doc](https://www.automatiqa.io/ship-doc/).
+
+The argument these projects sit under: [The Intelligent Orchestration Manifesto](https://www.automatiqa.io/manifesto/).
